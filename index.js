@@ -16,6 +16,7 @@ const jobRoutes = require("./routes/job_routes");
 const projectRoutes = require("./routes/projectForm_routes");
 const addResourcesRoutes = require("./routes/addResource_routes");
 const membershipRoutes = require("./routes/membership_routes");
+const profileRoutes = require("./routes/getGit_routes");
 const cors = require("cors");
 const passport = require("passport");
 // const csrf = require("csurf");
@@ -111,6 +112,7 @@ app.use("/forget", forgetPasswordRoutes);
 app.use("/projects/", projectRoutes);
 app.use("/resources/", addResourcesRoutes);
 app.use("/membership/", membershipRoutes);
+app.use("/profile/", profileRoutes);
 app.get("/form-token", (req, res) => {
   res.json({ formToken: "sample token" });
 });
