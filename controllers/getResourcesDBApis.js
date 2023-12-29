@@ -12,8 +12,8 @@ const domain=[
     "Mobile-Development",
     "Cloud-DevOps",
 ]
-let result=[];
 exports.getResources = async (res) => {
+    let result=[];
     try{
         const resourcesData = await Promise.all(
             domain.map(async (domain) => {
